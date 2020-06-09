@@ -1,0 +1,48 @@
+<div id="calendar" phx-hook="PickDate">
+
+  <table class="calendar_table">
+    <caption id="calendar_caption">
+      <a
+        href="#"
+        phx-click="prev-month"
+        phx-target="<%= @myself %>"
+        class="calendar_previous_month">&laquo; Prev</a>
+
+      <h4><%= Timex.format!(@current_date, "{Mshort} {YYYY}") %></h4>
+
+      <a
+        href="#"
+        phx-click="next-month"
+        phx-target="<%= @myself %>"
+        class="calendar_next_month">Next &raquo;</a>
+
+    </caption>
+    <thead>
+      <tr class="calendar_weekdays">
+        <%= for day_name <- @day_names do %>
+        <th>
+          <%= day_name %>
+        </th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for week <- @week_rows do %>
+      <tr>
+        <%= for day <- week do %>
+          <%= Phoenix.LiveView.Helpers.live_component(
+                @socket,
+                PhoenixWebComponents.Live.Calendar.DayComponent,
+                day: day,
+                current_date: @current_date,
+                week_start_at: @week_start_at
+              )
+          %>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
+
