@@ -1,4 +1,4 @@
-defmodule PhoenixWebComponents.Live.Calendar.Socket do
+defmodule WebIt.Live.Calendar.Socket do
 
   use Phoenix.LiveComponent
 
@@ -14,20 +14,14 @@ defmodule PhoenixWebComponents.Live.Calendar.Socket do
       week_start_at: @week_start_at,
     ]
     assign(socket, assigns)
-# |> IO.inspect(label: "BUILD ASSIGNS")
   end
 
 
   def mount(socket) do
     current_date = Timex.now
-    Logger.warn("Mount Calendar for date: #{current_date}")
+    Logger.info("Mount Calendar for date: #{current_date}")
     {:ok, _build_assigns(socket, current_date)}
   end
-
-  # def update(assigns, socket) do
-
-  #   {:noreply, socket}
-  # end
 
   defp day_names(:sun), do:  [7, 1, 2, 3, 4, 5, 6] |> Enum.map(&Timex.day_shortname/1)
   defp day_names(_), do:  [1, 2, 3, 4, 5, 6, 7] |> Enum.map(&Timex.day_shortname/1)
@@ -50,18 +44,18 @@ defmodule PhoenixWebComponents.Live.Calendar.Socket do
 
   def handle_event("prev-month", _, socket) do
     current_date = Timex.shift(socket.assigns.current_date, months: -1)
-    Logger.warn("Shift calendar back to: #{current_date}")
+    Logger.info("Shift calendar back to: #{current_date}")
     {:noreply, _build_assigns(socket, current_date)}
   end
 
   def handle_event("next-month", _, socket) do
     current_date = Timex.shift(socket.assigns.current_date, months: 1)
-    Logger.warn("Shift calendar forward to: #{current_date}")
+    Logger.info("Shift calendar forward to: #{current_date}")
     {:noreply, _build_assigns(socket, current_date)}
   end
 
   def handle_event("pick-date", %{"date" => date}, socket) do
-    Logger.warn("Pick date for: #{date}")
+    Logger.info("Pick date for: #{date}")
     {:noreply, push_redirect(socket, to: "/todos/#{date}")}
   end
 end

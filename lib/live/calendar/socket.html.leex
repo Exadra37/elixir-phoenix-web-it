@@ -32,7 +32,7 @@
         <%= for day <- week do %>
           <%= Phoenix.LiveView.Helpers.live_component(
                 @socket,
-                PhoenixWebComponents.Live.Calendar.DayComponent,
+                WebIt.Live.Calendar.Day,
                 day: day,
                 current_date: @current_date,
                 week_start_at: @week_start_at

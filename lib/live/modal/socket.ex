@@ -1,7 +1,6 @@
-defmodule PhoenixWebComponents.Live.Modal.Socket do
-  use Phoenix.LiveComponent
-  # use PhoenixWebComponents, :live_component
+defmodule WebIt.Live.Modal.Socket do
 
+  use Phoenix.LiveComponent
   require Logger
 
   @defaults %{

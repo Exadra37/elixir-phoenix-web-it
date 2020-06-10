@@ -1,4 +1,4 @@
-defmodule PhoenixWebComponents.Live.Calendar.DayComponent do
+defmodule WebIt.Live.Calendar.Day do
 
   use Phoenix.LiveComponent
   use Timex
