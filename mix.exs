@@ -1,21 +1,23 @@
-defmodule PhoenixWebComponents.MixProject do
+defmodule WebIt.MixProject do
   use Mix.Project
 
-  @package_name "PHOENIX WEB COMPONENTS"
+  @package_name "WEB IT"
 
   @version "0.1.0"
 
-  @source_url "https://gitlab.com/exadra37-elixir/packages/phoenix-web-components"
+  @source_url "https://gitlab.com/exadra37-elixir/packages/web-it"
 
-  @homepage_url "https://gitlab.com/exadra37-elixir/packages/phoenix-web-components/blob/master/README.md"
+  @homepage_url "https://gitlab.com/exadra37-elixir/packages/web-it/blob/master/README.md"
 
   @description """
-  A package with web components for Phoenix projects, with Live View and without it.
+  A package with web components for Elixir and Phoenix projects, with Live View and without it.
+
+  Also includes vanilla javascript utilities and pure css utilities.
   """
 
   def project() do
     [
-      app: :phoenix_web_components,
+      app: :web_it,
       version: @version,
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
