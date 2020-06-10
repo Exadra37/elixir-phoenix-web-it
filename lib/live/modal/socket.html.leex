@@ -24,24 +24,19 @@
           <!-- Buttons -->
           <%= if @buttons != nil do %>
           <div class="modal-buttons">
-            <!-- Left Button -->
-            <button class="left-button"
-                    type="button"
-                    phx-click="left-button-click"
-                    phx-target="#modal-<%= @id %>">
-              <div>
-                <%= @buttons.left_button %>
-              </div>
-            </button>
-            <!-- Right Button -->
-            <button class="right-button"
-                    type="button"
-                    phx-click="right-button-click"
-                    phx-target="#modal-<%= @id %>">
-              <div>
-                <%= @buttons.right_button %>
-              </div>
-            </button>
+            <button
+              class="left-button"
+              type="button"
+              phx-click="<%= @buttons.left.phx_click %>"
+              <%= @buttons.left.phx_values %>
+            ><%= @buttons.left.text %></button>
+
+            <button
+              class="right-button"
+              type="button"
+              phx-click="<%= @buttons.right.phx_click %>"
+              <%= @buttons.right.phx_values %>
+            ><%= @buttons.right.text %></button>
           <% end %>
           </div>
         </div>

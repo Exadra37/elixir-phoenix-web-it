@@ -5,11 +5,11 @@ defmodule WebIt.Live.Modal.Socket do
 
   @defaults %{
     left_button: "Cancel",
-    left_button_action: nil,
     left_button_param: nil,
     right_button: "OK",
-    right_button_action: nil,
-    right_button_param: nil
+    right_button_param: nil,
+    left_phx_click: nil,
+    right_phx_click: nil,
   }
 
   def mount(socket) do
