@@ -1,0 +1,21 @@
+.confirmation-dialog {
+  position: relative;
+}
+
+.confirmation-dialog-question {
+  padding-top: 1rem;
+}
+
+.confirmation-dialog-buttons {
+  position: relative;
+  display: flow-root;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.confirmation-dialog-cancel {
+  float: left;
+}
+
+.confirmation-dialog-accept {
+  float: right;
+}

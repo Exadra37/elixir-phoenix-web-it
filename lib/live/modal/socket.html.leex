@@ -7,38 +7,23 @@
 
       <div class="modal-card">
         <div class="modal-inner-card">
-          <!-- Title -->
-          <%= if @title != nil do %>
-          <div class="modal-title">
+          <%= if assigns[:title] do %>
+          <div class="modal-title" data-modal-id="modal-<%= @id %>">
             <%= @title %>
           </div>
           <% end %>
 
-          <!-- Body -->
-          <%= if @body != nil do %>
+          <%= if assigns[:body] do %>
           <div class="modal-body" data-modal-id="modal-<%= @id %>">
             <%= @body %>
           </div>
           <% end %>
 
-          <!-- Buttons -->
-          <%= if @buttons != nil do %>
-          <div class="modal-buttons">
-            <button
-              class="left-button"
-              type="button"
-              phx-click="<%= @buttons.left.phx_click %>"
-              <%= @buttons.left.phx_values %>
-            ><%= @buttons.left.text %></button>
-
-            <button
-              class="right-button"
-              type="button"
-              phx-click="<%= @buttons.right.phx_click %>"
-              <%= @buttons.right.phx_values %>
-            ><%= @buttons.right.text %></button>
-          <% end %>
+          <%= if assigns[:footer] do %>
+          <div class="modal-footer" data-modal-id="modal-<%= @id %>">
+            <%= @footer %>
           </div>
+          <% end %>
         </div>
       </div>
     </div>
