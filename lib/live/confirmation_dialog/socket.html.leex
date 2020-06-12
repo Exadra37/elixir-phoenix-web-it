@@ -7,9 +7,7 @@
   <button
     class="button button-outline confirmation-dialog-cancel"
     type="button"
-
     phx-click="<%= @buttons.left.phx_click %>"
-    phx-target="<%= @myself %>"
     data-close-modal="true"
     <%= @buttons.left.phx_values %>
   ><%= @buttons.left.text %></button>
@@ -17,8 +15,8 @@
   <button
     class="button confirmation-dialog-accept"
     type="button"
+    phx-debounce="300"
     phx-click="<%= @buttons.right.phx_click %>"
-    phx-target="<%= @myself %>"
     data-close-modal="true"
     <%= @buttons.right.phx_values %>
   ><%= @buttons.right.text %></button>
