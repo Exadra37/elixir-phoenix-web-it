@@ -3,15 +3,11 @@
   --animate-delay: 0.1s;
 }
 
-.modal {
-  position: relative;
-}
-
-.modal-hide {
+.modal-container {
   display: none;
 }
 
-.modal-container {
+.modal-background {
   position: fixed;
   top: 0;
   left: 0;

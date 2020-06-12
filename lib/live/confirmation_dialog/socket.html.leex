@@ -1,5 +1,5 @@
 <div class="confirmation-dialog">
-<div class="confirmation-dialog-question" data-modal-id="confirmation-dialog-<%= @id %>">
+<div class="confirmation-dialog-question">
   <%= @question %>
 </div>
 
@@ -7,7 +7,10 @@
   <button
     class="button button-outline confirmation-dialog-cancel"
     type="button"
+
     phx-click="<%= @buttons.left.phx_click %>"
+    phx-target="<%= @myself %>"
+    data-close-modal="true"
     <%= @buttons.left.phx_values %>
   ><%= @buttons.left.text %></button>
 
@@ -15,6 +18,8 @@
     class="button confirmation-dialog-accept"
     type="button"
     phx-click="<%= @buttons.right.phx_click %>"
+    phx-target="<%= @myself %>"
+    data-close-modal="true"
     <%= @buttons.right.phx_values %>
   ><%= @buttons.right.text %></button>
 </div>

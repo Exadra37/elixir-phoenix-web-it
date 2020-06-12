@@ -8,9 +8,10 @@ defmodule WebIt.Live.Calendar.Day do
 
     ~L"""
     <td
-      data-click-type="pick-date"
+      data-close-modal="true"
       phx-debounce="300"
       phx-click="pick-date"
+      phx-target="<%= @myself_parent %>"
       phx-value-date="<%= Timex.format!(@day, "%Y-%m-%d", :strftime) %>"
       class="<%= @day_class %>"
     >

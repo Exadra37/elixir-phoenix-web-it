@@ -13,6 +13,7 @@ defmodule WebIt.Live.Calendar.Socket do
       week_rows: week_rows(current_date),
       week_start_at: @week_start_at,
     ]
+
     assign(socket, assigns)
   end
 
