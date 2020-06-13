@@ -32,7 +32,7 @@
       <%= for week <- @week_rows do %>
       <tr>
         <%= for day <- week do %>
-          <%= Phoenix.LiveView.Helpers.live_component(
+          <%= live_component(
                 @socket,
                 WebIt.Live.Calendar.Day,
                 day: day,

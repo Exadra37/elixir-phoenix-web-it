@@ -1,6 +1,6 @@
 defmodule WebIt.Live.Calendar.Socket do
 
-  use Phoenix.LiveComponent
+  use WebIt, :phoenix_live_component
 
   require Logger
 

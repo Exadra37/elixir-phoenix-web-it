@@ -1,6 +1,7 @@
 defmodule WebIt.Live.Calendar.Day do
 
-  use Phoenix.LiveComponent
+  use WebIt, :phoenix_live_component
+
   use Timex
 
   def render(assigns) do
