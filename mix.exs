@@ -10,9 +10,11 @@ defmodule WebIt.MixProject do
   @homepage_url "https://gitlab.com/exadra37-elixir/packages/web-it/blob/master/README.md"
 
   @description """
-  A package with web components for Elixir and Phoenix projects, with Live View and without it.
+  A collection of web components for Elixir and Phoenix projects.
 
-  Also includes vanilla javascript utilities and pure css utilities.
+  The web components will be normal Html templates or full featured Phoenix Live View ones.
+
+  A collection of Vanilla Javascript scripts will also be part of this package. This scripts will be utilities to use in conjunction with the web components.
   """
 
   def project() do
@@ -52,6 +54,8 @@ defmodule WebIt.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.21", only: :dev, runtime: false},
+      {:phoenix_live_view, "~> 0.13.3"},
+      {:timex, "~> 3.5"},
     ]
   end
 

@@ -1,0 +1,28 @@
+.confirmation-dialog {
+  position: relative;
+  max-width: 30rem;
+  text-align: center;
+}
+
+.confirmation-dialog-card {
+  box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+}
+
+.confirmation-dialog-question {
+  padding-top: 1rem;
+}
+
+.confirmation-dialog-buttons {
+  position: relative;
+  display: flow-root;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.confirmation-dialog-cancel {
+  float: left;
+}
+
+.confirmation-dialog-accept {
+  float: right;
+}
