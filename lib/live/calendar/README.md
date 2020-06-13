@@ -16,6 +16,8 @@ Add to your `assets/css/app.scss`:
 @import "./../../deps/web_it/lib/live/calendar/css/calendar.css";
 ```
 
+[Home](/README.md)
+
 ### In a Live View Template
 
 Use it  from a live view template:
@@ -32,6 +34,8 @@ Use it  from a live view template:
     )
 %>
 ```
+
+[Home](/README.md)
 
 ### Inside a Modal on a Live View Template
 
@@ -78,3 +82,5 @@ Use it from you live view template inside a modal:
     )
 %>
 ```
+
+[Home](/README.md)

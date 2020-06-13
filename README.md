@@ -7,6 +7,13 @@ The web components will be normal Html templates or full featured Phoenix Live V
 A collection of Vanilla Javascript scripts will also be part of this package. This scripts will be utilities to use in conjunction with the web components.
 
 
+## Phoenix Live View Components
+
+* [Modal](/lib/live/modal/README.md)
+* [Calendar](/lib/live/calendar/README.md)
+* [Confirmation Dialog](/lib/live/confirmation_dialog/README.md)
+
+
 ## INSTALLATION
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed

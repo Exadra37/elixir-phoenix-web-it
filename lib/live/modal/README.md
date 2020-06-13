@@ -14,7 +14,7 @@ The click events to open and close the Modal are not handled on the server side,
 Add to your `assets/css/app.scss`:
 
 ```css
-@import "./../../lib/web_it/lib/css/animate.css";
+@import "./../../deps/web_it/lib/css/animate.css";
 @import "./../../deps/web_it/lib/live/modal/css/modal.css";
 ```
 
