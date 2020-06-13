@@ -36,13 +36,8 @@ let Hooks = {
 The button to trigger the modal:
 
 ```html
-<button
-  class="button button-outline"
-  phx-hook="ModalOpen"
-  data-modal-id="UNIQUE_MODAL_ID"
->Show Calendar</button>
+<button class="button button-outline" phx-hook="ModalOpen" data-modal-id="UNIQUE_MODAL_ID">Show Confirmation Dialog</button>
 ```
-
 
 Use it from you live view template:
 
