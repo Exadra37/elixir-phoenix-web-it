@@ -6,6 +6,8 @@ This modal is only a container where we will inject other content, instead of ha
 
 The click events to open and close the Modal are not handled on the server side, as in the original example, because that approach gives a bad user experience in slow and unstable Internet connections, like when commuting in public transports.
 
+[Home](/README.md)
+
 
 ## HOW TO USE
 
@@ -17,6 +19,8 @@ Add to your `assets/css/app.scss`:
 @import "./../../deps/web_it/lib/css/animate.css";
 @import "./../../deps/web_it/lib/live/modal/css/modal.css";
 ```
+
+[Home](/README.md)
 
 ### Require the Javascript
 
@@ -31,6 +35,8 @@ let Hooks = {
 }
 ```
 
+[Home](/README.md)
+
 ### In a Live View Template
 
 The button to trigger the modal:
@@ -42,7 +48,6 @@ The button to trigger the modal:
   data-modal-id="UNIQUE_MODAL_ID"
 >Show Calendar</button>
 ```
-
 
 Use it from you live view template:
 
@@ -73,3 +78,5 @@ Use it from you live view template:
     )
 %>
 ```
+
+[Home](/README.md)

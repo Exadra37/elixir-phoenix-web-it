@@ -2,6 +2,9 @@
 
 This confirmation dialog component was inspired by [pthompson/live_component_examples](https://github.com/pthompson/live_component_examples) repository on Github, from where I borrowed some of the code used inside the modal example.
 
+[Home](/README.md)
+
+
 ## HOW TO USE
 
 ### Require the CSS
@@ -11,6 +14,8 @@ Add to your `assets/css/app.scss`:
 ```css
 @import "./../../deps/web_it/lib/live/confirmation_dialog/css/confirmation_dialog.css";
 ```
+
+[Home](/README.md)
 
 ### Inside a Modal on a Live View Template
 
@@ -68,3 +73,5 @@ Use it from you live view template inside a modal:
     )
 %>
 ```
+
+[Home](/README.md)

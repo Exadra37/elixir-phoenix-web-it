@@ -5,6 +5,8 @@ This Calendar component was inspired by:
 * [andreaseriksson/tutorials](https://github.com/andreaseriksson/tutorials) repository on Github for the logic.
 * [nicolasblanco/booking_calendar](https://github.com/nicolasblanco/booking_calendar) repository on Github for the CSS.
 
+[Home](/README.md)
+
 
 ## HOW TO USE
 
