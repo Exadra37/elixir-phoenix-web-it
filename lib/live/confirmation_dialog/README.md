@@ -9,7 +9,7 @@ This confirmation dialog component was inspired by [pthompson/live_component_exa
 Add to your `assets/css/app.scss`:
 
 ```css
-@import "./../../lib/web_it/lib/live/confirmation_dialog/css/confirmation_dialog.css";
+@import "./../../deps/web_it/lib/live/confirmation_dialog/css/confirmation_dialog.css";
 ```
 
 ### Inside a Modal on a Live View Template

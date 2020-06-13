@@ -13,7 +13,7 @@ This Calendar component was inspired by:
 Add to your `assets/css/app.scss`:
 
 ```css
-@import "./../../lib/web_it/lib/live/calendar/css/calendar.css";
+@import "./../../deps/web_it/lib/live/calendar/css/calendar.css";
 ```
 
 ### In a Live View Template
@@ -46,13 +46,23 @@ let Hooks = {
 }
 ```
 
+The button to trigger the modal:
+
+```html
+<button
+  class="button button-outline"
+  phx-hook="ModalOpen"
+  data-modal-id="UNIQUE_MODAL_ID"
+>Show Calendar</button>
+```
+
 Use it from you live view template inside a modal:
 
 ```elixir
 <%= live_component(
       @socket,
       WebIt.Live.Modal.Socket,
-      id: "unique-modal-id",
+      id: "UNIQUE_MODAL_ID",
       body: %{
         class: "your optional classes here",
         content: live_component(
