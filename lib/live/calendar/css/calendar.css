@@ -1,0 +1,103 @@
+/* To match the minimal size for the #calendar when used from inside the WebIt Modal */
+.modal-inner-container {
+  min-width: 33rem;
+  min-height: 33rem;
+}
+
+.calendar {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 30rem;
+  min-height: 33rem;
+  max-width: 40rem;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+.calendar-card {
+  box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  -moz-border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.calendar-svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.calendar_caption {
+  width: 100%;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgb(39, 174, 96);
+  padding: 1rem;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  -moz-border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.calendar_caption > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.calendar_caption h4 {
+  font-size: 1.5em;
+  color: #FFFFFF;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.calendar_previous_month {
+  color: #FFFFFF;
+  width: 20%;
+  cursor: pointer;
+}
+
+.calendar_next_month {
+  color: #FFFFFF;
+  width: 20%;
+  cursor: pointer;
+}
+
+.calendar_table {
+  position: relative;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.calendar_table th, .calendar_table td {
+  text-align: center;
+  padding: 0.6rem 0.2rem;
+}
+
+.calendar_table td:hover {
+  background: #aaaaaa;
+}
+
+.calendar-today {
+  background: #eeeeee
+}
+
+.calendar-current-date {
+  background: #aaaaaa
+}
+
+.calendar-saturday {
+  color: green
+}
+
+.calendar-sunday {
+  color: red;
+}
+
+.calendar-other-month-day {
+  opacity: 0.3;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
