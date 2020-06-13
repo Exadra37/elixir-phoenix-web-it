@@ -1,0 +1,30 @@
+<div id="modal-<%= @id %>" class="modal-container animate__animated" phx-hook="ModalClose" data-modal-id="modal-<%= @id %>">
+  <div class="modal-background">
+    <div class="modal-inner-container">
+
+      <button class="button button-clear modal-close" data-close-modal="true"></button>
+
+      <div class="modal-card" >
+        <div class="modal-inner-card">
+          <%= if assigns[:title] do %>
+          <div class="modal-title">
+            <%= @title %>
+          </div>
+          <% end %>
+
+          <%= if assigns[:body] do %>
+          <div class="modal-body">
+            <%= @body %>
+          </div>
+          <% end %>
+
+          <%= if assigns[:footer] do %>
+          <div class="modal-footer">
+            <%= @footer %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
