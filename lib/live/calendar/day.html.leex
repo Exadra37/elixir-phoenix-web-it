@@ -1,0 +1,12 @@
+<td
+  class="<%= @day_class %>"
+  data-close-modal="true"
+  phx-value-date="<%= Timex.format!(@day, "%Y-%m-%d", :strftime) %>"
+  <%= if assigns[:click_date][:phx_debounce] do " phx-debounce=#{@click_date.phx_debounce}" else " phx-debounce=300" end %>
+  <%= if assigns[:click_date][:phx_click] do " phx-click=#{@click_date.phx_click}" else " phx-click=pick_date" end %>
+
+  <%= if assigns[:click_date][:phx_target_self] do " phx-target=#{@myself_parent}" end %>
+
+  <%= if assigns[:click_date][:push_redirect_to] do " phx-value-push-redirect-to=#{@click_date.push_redirect_to}" end %>
+
+><%= Timex.format!(@day, "%d", :strftime) %></td>

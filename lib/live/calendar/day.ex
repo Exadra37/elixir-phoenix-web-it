@@ -2,27 +2,13 @@ defmodule WebIt.Live.Calendar.Day do
 
   use WebIt, :phoenix_live_component
 
-  def render(assigns) do
+  def update(assigns, socket) do
     assigns = Map.put(assigns, :day_class, day_class(assigns))
-
-    ~L"""
-    <td
-      data-close-modal="true"
-      phx-debounce="300"
-      phx-click="pick-date"
-      phx-target="<%= @myself_parent %>"
-      phx-value-date="<%= Timex.format!(@day, "%Y-%m-%d", :strftime) %>"
-      phx-value-redirect-to="<%= @click_date.redirect_to %>"
-      class="<%= @day_class %>"
-    >
-      <%= Timex.format!(@day, "%d", :strftime) %>
-    </td>
-    """
+    {:ok, assign(socket, assigns)}
   end
 
   defp day_class(assigns) do
     class = "cursor-pointer"
-
     with class <- _today_class(assigns, class),
          class <- _current_date_class(assigns, class),
          class <- _saturday_class(assigns, class),

@@ -19,6 +19,7 @@ defmodule WebIt.Live.Calendar.Socket do
       day_names: day_names(@week_start_at),
       week_rows: week_rows(current_date),
       week_start_at: @week_start_at,
+      click_date: %{},
     ]
 
     assign(socket, assigns)
@@ -43,21 +44,22 @@ defmodule WebIt.Live.Calendar.Socket do
     |> Enum.chunk_every(7)
   end
 
-  def handle_event("prev-month", _, socket) do
+  def handle_event("prev_month", _, socket) do
     current_date = Timex.shift(socket.assigns.current_date, months: -1)
     Logger.info("Shift calendar backwards into: #{current_date}")
     {:noreply, _build_assigns(socket, current_date)}
   end
 
-  def handle_event("next-month", _, socket) do
+  def handle_event("next_month", _, socket) do
     current_date = Timex.shift(socket.assigns.current_date, months: 1)
     Logger.info("Shift calendar forwards into: #{current_date}")
     {:noreply, _build_assigns(socket, current_date)}
   end
 
-  def handle_event("pick-date", %{"date" => date, "redirect-to" => redirect_to}, socket) do
-    Logger.info("Pick date for: #{date}")
+  def handle_event("pick_date", %{"date" => date, "push-redirect-to" => redirect_to}, socket) do
+    Logger.info("Pick date - Push redirect for date: #{date}")
 
     {:noreply, push_redirect(socket, to: String.replace(redirect_to, ":date", date))}
   end
+
 end
