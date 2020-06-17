@@ -19,11 +19,15 @@ defmodule WebIt.Live.Calendar.Socket do
       day_names: day_names(@week_start_at),
       week_rows: week_rows(current_date),
       week_start_at: @week_start_at,
-      click_date: %{},
+      click_date: _click_date(socket.assigns),
     ]
 
     assign(socket, assigns)
   end
+
+  defp _click_date(%{click_date: click_date}), do: click_date
+  defp _click_date(_assigns), do: %{}
+
 
   defp day_names(:sun), do:  [7, 1, 2, 3, 4, 5, 6] |> Enum.map(&Timex.day_shortname/1)
   defp day_names(_), do:  [1, 2, 3, 4, 5, 6, 7] |> Enum.map(&Timex.day_shortname/1)
