@@ -6,20 +6,23 @@
 
   <div class="confirmation-dialog-buttons">
     <button
+      <%= if assigns[:buttons][:left][:id] do "id=" <> @buttons.left.id end %>
       class="button button-outline confirmation-dialog-cancel"
       type="button"
+      <%= if assigns[:buttons][:left][:phx_debounce] do @buttons.left.phx_debounce end %>
       phx-click="<%= @buttons.left.phx_click %>"
       data-close-modal="true"
-      <%= @buttons.left.phx_values %>
+      <%= if assigns[:buttons][:left][:phx_values] do @buttons.left.phx_values end %>
     ><%= @buttons.left.text %></button>
 
     <button
+      <%= if assigns[:buttons][:right][:id] do "id=" <> @buttons.right.id end %>
       class="button confirmation-dialog-accept"
       type="button"
-      phx-debounce="300"
+      <%= if assigns[:buttons][:right][:phx_debounce] do @buttons.right.phx_debounce end %>
       phx-click="<%= @buttons.right.phx_click %>"
       data-close-modal="true"
-      <%= @buttons.right.phx_values %>
+      <%= if assigns[:buttons][:right][:phx_values] do @buttons.right.phx_values end %>
     ><%= @buttons.right.text %></button>
   </div>
 </div>
