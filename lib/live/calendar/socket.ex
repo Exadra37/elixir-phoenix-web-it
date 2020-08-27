@@ -8,6 +8,8 @@ defmodule WebIt.Live.Calendar.Socket do
   @week_start_at :mon
 
   def mount(socket) do
+    socket = assign_new(socket, :phx_values, fn -> nil end)
+
     current_date = Timex.now
     Logger.info("Mount Calendar for date: #{current_date}")
     {:ok, _build_assigns(socket, current_date)}

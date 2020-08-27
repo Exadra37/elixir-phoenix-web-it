@@ -1,7 +1,9 @@
 <td
-  class="<%= @day_class %>"
+  class="calendar-day <%= @day_class %>"
   data-close-modal="true"
   phx-value-date="<%= Timex.format!(@day, "%Y-%m-%d", :strftime) %>"
+  <%= if assigns[:phx_values] !== nil do @phx_values end %>
+
   <%= if assigns[:click_date][:phx_debounce] do " phx-debounce=#{@click_date.phx_debounce}" else " phx-debounce=300" end %>
   <%= if assigns[:click_date][:phx_click] do " phx-click=#{@click_date.phx_click}" else " phx-click=pick_date" end %>
 
